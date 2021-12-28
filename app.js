@@ -4,7 +4,7 @@ const socketio = require("socket.io");
 
 app.use(express.static("public"));
 
-const PORT = 5000;
+let PORT = process.env.PORT || 5000;
 const serverInstance = app.listen(PORT, ()=>{
     console.log("listening to port " + PORT);
 });
